@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="Stop TTS engine when sub routine complete">
+    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="ChatGPT prompt">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpeechOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SpeechOutput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatGPTInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatGPTInterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687712887600</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ChatGPT prompt">
+      <created>1687713129594</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687713129594</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +132,7 @@
     <MESSAGE value="Load chatgpt private key from .env file" />
     <MESSAGE value="Load chatgpt private key from .env file&#10;Call TTS function to say reply text" />
     <MESSAGE value="Stop TTS engine when sub routine complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stop TTS engine when sub routine complete" />
+    <MESSAGE value="ChatGPT prompt" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChatGPT prompt" />
   </component>
 </project>
