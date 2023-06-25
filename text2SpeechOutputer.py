@@ -5,6 +5,7 @@ def txt2Speech (text):
     engine.say(text)
     # engine.say(text1)
     engine.runAndWait()
+    engine.stop()
 
 def intro ():
     txt2Speech("Hi. I am Me Me. I am a smart robot.")
