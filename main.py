@@ -53,6 +53,7 @@ def intro ():
 # Welcome speech
 intro()
 
+# Speech Recognition sub-routine
 count = 1
 while(count):
 
@@ -78,7 +79,8 @@ while(count):
             MyText = MyText.lower()
 
             print("Did you say ",MyText)
-            SpeakText(MyText)
+            txt2Speech('Got it')
+            # SpeakText(MyText)
 
             # Save speech to text file
             outputSpeech2File(MyText)

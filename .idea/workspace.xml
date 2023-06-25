@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="Stop TTS engine after end of sub-routine&#10;Play welcome prompt">
+    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="Completed functions - Speech to Text, TTS &amp; ChatGPT API calls">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpeechOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SpeechOutput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatGPTInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatGPTInterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speechCollector.py" beforeDir="false" afterPath="$PROJECT_DIR$/speechCollector.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687713483347</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Completed functions - Speech to Text, TTS &amp; ChatGPT API calls">
+      <created>1687714017250</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687714017250</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +148,7 @@
     <MESSAGE value="Stop TTS engine when sub routine complete" />
     <MESSAGE value="ChatGPT prompt" />
     <MESSAGE value="Stop TTS engine after end of sub-routine&#10;Play welcome prompt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stop TTS engine after end of sub-routine&#10;Play welcome prompt" />
+    <MESSAGE value="Completed functions - Speech to Text, TTS &amp; ChatGPT API calls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed functions - Speech to Text, TTS &amp; ChatGPT API calls" />
   </component>
 </project>
