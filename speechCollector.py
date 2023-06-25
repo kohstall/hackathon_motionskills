@@ -1,10 +1,8 @@
 # Python program to translate
 # speech to text and text to speech
-
 import speech_recognition as sr
 import pyttsx3
 import openai
-
 
 # Initialize the recognizerWhat
 r = sr.Recognizer()
@@ -18,10 +16,10 @@ def SpeakText(command):
     engine.say(command)
     engine.runAndWait()
 
-def outputSpeech2File(mText):
+def saveSpeech2File(mText):
     # Open function to open the file "MyFile1.txt"
     # (same directory) in append mode and
-    fhandle = open('SpeechOutput.txt','a')
+    fhandle = open('SpeechOutput.txt','w')
     # fhandle.write('this is a test')
     fhandle.write(mText)
     fhandle.write('\n')
@@ -30,7 +28,6 @@ def outputSpeech2File(mText):
 
 # Loop infinitely for user to
 # speak
-
 count = 2
 while(count):
 
@@ -55,10 +52,11 @@ while(count):
             MyText = r.recognize_google(audio2)
             MyText = MyText.lower()
 
+            # Save speech to file
+            saveSpeech2File(MyText)
+
             print("Did you say ",MyText)
             SpeakText(MyText)
-            # Save speech to text
-            # outputSpeech2File(MyText)
 
     except sr.RequestError as e:
         print("Could not request results; {0}".format(e))
