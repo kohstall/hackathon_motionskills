@@ -4,9 +4,11 @@
 import speech_recognition as sr
 import pyttsx3
 import openai
+import time
 
 # openai.api_key = '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'
-openai.api_key = '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'
+# openai.api_key = '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'
+openai.api_key = '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'
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Initialize the recognizerWhat
@@ -71,17 +73,28 @@ while(count):
 
 # import openai
 # openai.api_key = 'YOUR_API_KEY'
-# messages = [ {"role": "system", "content":  "You are a intelligent assistant."} ]
+messages = [ {"role": "system", "content":  "You are a intelligent assistant."} ]
 
-while True:
-    message = input("User : ")
-    if message:
-        messages.append(
-            {"role": "user", "content": message},
-        )
-        chat = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo", messages=messages
-        )
-    reply = chat.choices[0].message.content
-    print(f"ChatGPT: {reply}")
-    messages.append({"role": "assistant", "content": reply})
+chatgptCount = 1
+while chatgptCount:
+    chatgptCount = chatgptCount - 1
+
+    # message = input("User : ")
+    fhandle = open('SpeechOutput.txt')
+    for line in fhandle:
+        if line:
+            messages.append(
+                {"role": "user", "content": line},
+            )
+            chat = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo", messages=messages
+            )
+        reply = chat.choices[0].message.content
+
+        print(f"ChatGPT: {reply}")
+        messages.append({"role": "assistant", "content": reply})
+
+        # sleep 2 secs
+        t = 2
+        time.sleep(t)
+

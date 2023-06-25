@@ -25,7 +25,6 @@ def saveSpeech2File(mText):
     fhandle.write('\n')
     fhandle.close()
 
-
 # Loop infinitely for user to
 # speak
 count = 2
