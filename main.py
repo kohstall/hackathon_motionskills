@@ -8,7 +8,7 @@ import time
 
 # openai.api_key = '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'
 # openai.api_key = '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'
-openai.api_key = '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'
+openai.api_key = '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'
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Initialize the recognizerWhat
@@ -90,7 +90,6 @@ while chatgptCount:
                 model="gpt-3.5-turbo", messages=messages
             )
         reply = chat.choices[0].message.content
-
         print(f"ChatGPT: {reply}")
         messages.append({"role": "assistant", "content": reply})
 
