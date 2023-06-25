@@ -19,7 +19,7 @@ def SpeakText(command):
 def saveSpeech2File(mText):
     # Open function to open the file "MyFile1.txt"
     # (same directory) in append mode and
-    fhandle = open('SpeechOutput.txt','w')
+    fhandle = open('SpeechOutput.txt','a')
     # fhandle.write('this is a test')
     fhandle.write(mText)
     fhandle.write('\n')

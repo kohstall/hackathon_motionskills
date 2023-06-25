@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.
 
-private_key = os.getenv("CHATGPT_PRIVATE_KEY")
+openai.api_key = os.getenv("CHATGPT_PRIVATE_KEY")
 print(private_key) # for testing purposes only
 
 # openai.api_key = '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'
@@ -12,7 +12,7 @@ print(private_key) # for testing purposes only
 # openai.api_key = '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'
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
-chatgptCount = 0
+chatgptCount = 1
 while chatgptCount:
     chatgptCount = chatgptCount - 1
 

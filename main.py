@@ -5,13 +5,12 @@ import speech_recognition as sr
 import pyttsx3
 import openai
 import time
+import os
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env file
 
 # Load env variables from .env file
-private_key = os.getenv("CHATGPT_PRIVATE_KEY")
-print(private_key) # for testing purposes only
-
+openai.api_key = os.getenv("CHATGPT_PRIVATE_KEY")
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Initialize the recognizerWhat
@@ -20,11 +19,11 @@ r = sr.Recognizer()
 # Function to convert text to
 # speech
 def SpeakText(command):
-
     # Initialize the engine
     engine = pyttsx3.init()
     engine.say(command)
     engine.runAndWait()
+    engine.stop()
 
 def outputSpeech2File(mText):
     # Open function to open the file "MyFile1.txt"
@@ -40,6 +39,7 @@ def txt2Speech (text):
     engine.say(text)
     # engine.say(text1)
     engine.runAndWait()
+    engine.stop()
 
 def intro ():
     txt2Speech("Hi. I am Me Me. I am a smart robot.")
@@ -49,6 +49,9 @@ def intro ():
 # Loop infinitely for user to
 # speak
 ##########################################################
+
+# Welcome speech
+intro()
 
 count = 1
 while(count):
@@ -76,8 +79,9 @@ while(count):
 
             print("Did you say ",MyText)
             SpeakText(MyText)
-            # Save speech to text
-            # outputSpeech2File(MyText)
+
+            # Save speech to text file
+            outputSpeech2File(MyText)
 
     except sr.RequestError as e:
         print("Could not request results; {0}".format(e))
@@ -86,6 +90,7 @@ while(count):
         print("unknown error occurred")
 
 
+# ChatGPT sub-section
 messages = [ {"role": "system", "content":  "You are a intelligent assistant."} ]
 
 chatgptCount = 1
@@ -106,9 +111,10 @@ while chatgptCount:
         print(f"ChatGPT: {reply}")
         messages.append({"role": "assistant", "content": reply})
 
-        # TTS
+        # TTS: ChatGPT reply to speech
         txt2Speech(reply)
-        # sleep 2 secs
-        t = 2
-        time.sleep(t)
+
+        # sleep 1-2 secs
+        # t = 1
+        # time.sleep(t)
 
