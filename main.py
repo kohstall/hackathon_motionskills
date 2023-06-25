@@ -5,10 +5,13 @@ import speech_recognition as sr
 import pyttsx3
 import openai
 import time
+from dotenv import load_dotenv
+load_dotenv()  # take environment variables from .env file
 
-# openai.api_key = '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'
-# openai.api_key = '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'
-openai.api_key = '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'
+# Load env variables from .env file
+private_key = os.getenv("CHATGPT_PRIVATE_KEY")
+print(private_key) # for testing purposes only
+
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Initialize the recognizerWhat
@@ -32,9 +35,20 @@ def outputSpeech2File(mText):
     fhandle.write('\n')
     fhandle.close()
 
+def txt2Speech (text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    # engine.say(text1)
+    engine.runAndWait()
 
+def intro ():
+    txt2Speech("Hi. I am Me Me. I am a smart robot.")
+
+##########################################################
+# main loop
 # Loop infinitely for user to
 # speak
+##########################################################
 
 count = 1
 while(count):
@@ -71,8 +85,7 @@ while(count):
     except sr.UnknownValueError:
         print("unknown error occurred")
 
-# import openai
-# openai.api_key = 'YOUR_API_KEY'
+
 messages = [ {"role": "system", "content":  "You are a intelligent assistant."} ]
 
 chatgptCount = 1
@@ -93,6 +106,8 @@ while chatgptCount:
         print(f"ChatGPT: {reply}")
         messages.append({"role": "assistant", "content": reply})
 
+        # TTS
+        txt2Speech(reply)
         # sleep 2 secs
         t = 2
         time.sleep(t)
