@@ -8,7 +8,7 @@ def txt2Speech (text):
     engine.stop()
 
 def intro ():
-    txt2Speech("Hi. I am Me Me. I am a smart robot.")
+    txt2Speech("Hi. I am MooMi. I am a smart robot.")
 
 # main routine
 # engine = pyttsx3.init()

@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="Updated prompt to ChatGPT">
+    <list default="true" id="2abb80bc-099f-4830-a3c5-22ef19b73fa9" name="Changes" comment="Updated with more prompts from Google Bard">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpeechOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SpeechOutput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatGPTInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatGPTInterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speechCollector.py" beforeDir="false" afterPath="$PROJECT_DIR$/speechCollector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text2SpeechOutputer.py" beforeDir="false" afterPath="$PROJECT_DIR$/text2SpeechOutputer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687717163316</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated with more prompts from Google Bard">
+      <created>1687723747018</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1687723747018</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,6 +175,7 @@
     <MESSAGE value="Completed functions - Speech to Text, TTS &amp; ChatGPT API calls" />
     <MESSAGE value="Cleanup and comments" />
     <MESSAGE value="Updated prompt to ChatGPT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated prompt to ChatGPT" />
+    <MESSAGE value="Updated with more prompts from Google Bard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated with more prompts from Google Bard" />
   </component>
 </project>

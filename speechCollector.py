@@ -27,6 +27,7 @@ def saveSpeech2File(mText):
 
 # Loop infinitely for user to
 # speak
+# count to limit the # of tries; remove in main routine
 count = 2
 while(count):
 
@@ -44,8 +45,8 @@ while(count):
             # the surrounding noise level
             r.adjust_for_ambient_noise(source2, duration=0.2)
 
-            #listens for the user's input
-            audio2 = r.listen(source2)
+            # listens for the user's input, phrase time limit to remove extraneous speech
+            audio2 = r.listen(source2, timeout=3, phrase_time_limit=5)
 
             # Using google to recognize audio
             MyText = r.recognize_google(audio2)

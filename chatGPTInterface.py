@@ -7,9 +7,6 @@ load_dotenv()  # take environment variables from .env.
 openai.api_key = os.getenv("CHATGPT_PRIVATE_KEY")
 print(private_key) # for testing purposes only
 
-# openai.api_key = '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'
-# openai.api_key = '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'
-# openai.api_key = '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'
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 chatgptCount = 1
